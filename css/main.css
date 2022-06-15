@@ -662,18 +662,22 @@ footer .logo {
     height: 100%;
     width: 100%;
 
-background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
-.is-hidden{
+.backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
     
 }
 .backdrop.is-hidden .modal {
-    opacity: 0;
+    /* opacity: 0; */
     transform: translate(-50%, -150%) scale(0);
 }
 
@@ -685,25 +689,29 @@ background-color: rgba(0, 0, 0, 0.2);
     /* padding: 8px; */
     width: 528px;
     height: 581px;
-
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     
 
     background-color: #fff;
 }
-.modal-header {
-    padding-top: 8px;
-    padding-right: 8px;
-}
+
 .button-close {
-    display: flex;
+    position:absolute;
+    top: 8px;
+    right: 8px;
+
     padding: 0;
     width: 30px;
     height: 30px;
     margin-left: auto;
+    
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -720,7 +728,7 @@ background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal-form {
-    padding: 2px 39px 40px 41px;
+    padding: 40px 39px 40px 41px;
     
 display: block;
 }
@@ -728,7 +736,7 @@ display: block;
     margin-bottom: 12px;
 
     display: block;
-    font-style: 700;
+    font-weight: 700;
     font-size: 20px; 
     line-height: 1.15;
     text-align: center;
@@ -746,6 +754,7 @@ textarea {
     margin-top: 4px;
     margin-bottom: 10px;
     padding: 11px 12px;
+    color: rgba(117, 117, 117, 0.5);
 
 
 
@@ -759,6 +768,7 @@ border-radius: 4px;
     margin-bottom: 20px;
 }
 .agreement{
+    margin-left: 10px;
     display: block;
     margin-bottom: 30px;
     line-height: 1.71;
