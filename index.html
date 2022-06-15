@@ -416,8 +416,8 @@
         <div class="modal">
             
                 <button type="button" class="button-close" data-modal-close>
-                    <svg class="button-close-icon">
-                        <use href="./images/icons.svg#icon-close-black" height="18" width="18"> </use>
+                    <svg class="button-close-icon" height="18" width="18">
+                        <use href="./images/icons.svg#icon-close-black" > </use>
                     </svg>
                 </button>
             
@@ -445,10 +445,14 @@
                                 <textarea name="comment" placeholder="Введите текст"></textarea>
                             </label>
                         </li>
-                    </ul> <label class="agreement" for="agreement">
+                    </ul>
+                    <div class="agreement">
+                        <label class="agreement-label" for="agreement">
                     <input type="checkbox" value="agree" name="agreement" id="agreement">
                             Соглашаюсь с рассылкой и принимаю <a class="agreement-link" href="">Условия договора</a>
                     </label>
+                    </div>
+                    
                     <button type="submit" class="button button-basic">Отправить</button>
                 </form>
             
