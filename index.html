@@ -427,30 +427,46 @@
                     <ul class="form-list">
                         <li>
                             <label class="form-label"> Имя
-                                <input type="text" name="name">
+                                <input class="input-field" type="text" name="name">
+                                <svg class="input-icon" height="18" width="18">
+                                    <use href="./images/icons.svg#icon-form-person"></use>
+                                </svg>
                             </label>
                         </li>
                         <li>
                             <label class="form-label"> Телефон
-                                <input type="phone" name="phone">
+                                <input class="input-field" type="phone" name="phone">
+                                <svg class="input-icon" height="18" width="18">
+                                    <use href="./images/icons.svg#icon-form-phone"></use>
+                                </svg>
                             </label>
                         </li>
                         <li>
                             <label class="form-label"> Почта
-                                <input type="email" name="email">
+                                <input class="input-field" type="email" name="email">
+                                <svg class="input-icon" height="18" width="18">
+                                    <use href="./images/icons.svg#icon-form-email"></use>
+                                </svg>
                             </label>
                         </li>
                         <li>
                             <label class="form-label"> Комментарий
-                                <textarea name="comment" placeholder="Введите текст"></textarea>
+                                <textarea class="input-field" name="comment" placeholder="Введите текст"></textarea>
                             </label>
                         </li>
                     </ul>
                     <div class="agreement">
-                        <label class="agreement-label" for="agreement">
-                    <input type="checkbox" value="agree" name="agreement" id="agreement">
-                            Соглашаюсь с рассылкой и принимаю <a class="agreement-link" href="">Условия договора</a>
-                    </label>
+                        <label class="agreement-label">
+                            <input  class="agreement-check" type="checkbox" value="agree" name="agreement" >
+                            
+                            <svg class="agreement-icon" height="15" width="16">
+                                <use href="./images/icons.svg#icon-form-check"></use>
+                            </svg>
+                            <span class="agreement-text">
+                                Соглашаюсь с рассылкой и принимаю 
+                            <a class="agreement-link" href="">Условия договора</a>
+                            </span>
+                        </label>
                     </div>
                     
                     <button type="submit" class="button button-basic">Отправить</button>
